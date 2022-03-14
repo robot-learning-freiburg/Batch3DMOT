@@ -4,14 +4,14 @@
 
 This repository is the official implementation of the paper:
 
-> ****
+> Offline 3D Multi-Object Tracking Using Graph Neural Networks with Cross-Edge Modality Attention
 >
-> [Niclas Vödisch](https://rl.uni-freiburg.de/people/buechner)  and [Abhinav Valada](https://rl.uni-freiburg.de/people/valada).
+> [Martin Büchner](https://rl.uni-freiburg.de/people/buechner)  and [Abhinav Valada](https://rl.uni-freiburg.de/people/valada).
 >
 > *arXiv preprint arXiv:XXXX.XXXXX, 2022
 
 <p align="center">
-  <img src="batch3dmot_architecture.png" alt="Overview of Batch3DMOT architecture" width="700" />
+  <img src="batch3dmot_architecture.png" alt="Overview of Batch3DMOT architecture" width="800" />
 </p>
 
 If you find our work useful, please consider citing our paper:
