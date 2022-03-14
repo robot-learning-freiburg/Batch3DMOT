@@ -4,7 +4,7 @@
 
 This repository is the official implementation of the paper:
 
-> Offline 3D Multi-Object Tracking Using Graph Neural Networks with Cross-Edge Modality Attention
+> **Offline 3D Multi-Object Tracking Using Graph Neural Networks with Cross-Edge Modality Attention**
 >
 > [Martin Büchner](https://rl.uni-freiburg.de/people/buechner)  and [Abhinav Valada](https://rl.uni-freiburg.de/people/valada).
 >
