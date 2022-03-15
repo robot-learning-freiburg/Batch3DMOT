@@ -2,6 +2,10 @@
 # Batch3DMOT
 [**arXiv**](https://arxiv.org/abs/XXXX.XXXXX) | [**website**](http://batch3dmot.cs.uni-freiburg.de/)
 
+<p align="center">
+  <img src="video_banner.gif" alt="Overview of Batch3DMOT architecture" width="850" />
+</p>
+
 This repository is the official implementation of the paper:
 
 > **3D Multi-Object Tracking Using Graph Neural Networks with Cross-Edge Modality Attention**
