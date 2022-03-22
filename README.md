@@ -5,7 +5,9 @@
 This repository is the official implementation of the paper:
 
 > **3D Multi-Object Tracking Using Graph Neural Networks with Cross-Edge Modality Attention**
+>
 > [Martin Büchner](https://rl.uni-freiburg.de/people/buechner)  and [Abhinav Valada](https://rl.uni-freiburg.de/people/valada).
+>
 > *arXiv preprint arXiv:2203.10926, 2022*
 
 <p align="center">
@@ -19,6 +21,7 @@ Online 3D multi-object tracking (MOT) has witnessed significant research interes
 <p align="center">
   <img src="batch3dmot_architecture.png" alt="Overview of Batch3DMOT architecture" width="850" />
 </p>
+
 ## 👨‍💻 Code Release
 
 We will make the code publicly accessible upon acceptance of our paper.
