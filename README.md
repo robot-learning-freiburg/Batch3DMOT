@@ -1,6 +1,6 @@
 
 # Batch3DMOT
-[**arXiv**](https://arxiv.org/abs/XXXX.XXXXX) | [**website**](http://batch3dmot.cs.uni-freiburg.de/)
+[**arXiv**](https://arxiv.org/abs/2203.10926) | [**website**](http://batch3dmot.cs.uni-freiburg.de/)
 
 <p align="center">
   <img src="video_banner.gif" alt="Overview of Batch3DMOT architecture" width="850" />
@@ -12,7 +12,7 @@ This repository is the official implementation of the paper:
 >
 > [Martin Büchner](https://rl.uni-freiburg.de/people/buechner)  and [Abhinav Valada](https://rl.uni-freiburg.de/people/valada).
 >
-> *arXiv preprint arXiv:XXXX.XXXXX, 2022*
+> *arXiv preprint arXiv:2203.10926, 2022*
 
 <p align="center">
   <img src="batch3dmot_architecture.png" alt="Overview of Batch3DMOT architecture" width="850" />
@@ -20,10 +20,10 @@ This repository is the official implementation of the paper:
 
 If you find our work useful, please consider citing our paper:
 ```
-@article{buechner2022batch3dmot,
+@article{buechner22batch3dmot,
 	  title={3D Multi-Object Tracking Using Graph Neural Networks with Cross-Edge Modality Attention},
 	  author={B{\"u}chner, Martin and Valada, Abhinav},
-	  journal={arXiv preprint arXiv:XXXX.XXXX},
+	  journal={arXiv preprint arXiv:2203.10926},
 	  year={2022}
 }
 ```
