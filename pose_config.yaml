@@ -1,0 +1,137 @@
+---
+main:
+    project: 'batch3dmot'
+    dataset: 'nuscenes'
+    version: 'v1.0-trainval'
+    class_dict: 'nuscenes_tracking_eval'
+    sensors_used:
+        lidar: False
+        img: False
+        radar: False
+    detections: 'centerpoint' # centerpoint or megvii
+paths:
+    home_dir: '/home/user/'
+    top_level: '/home/user/Batch3DMOT/'
+    package: '/home/user/Batch3DMOT/batch_3dmot/'
+    data: '/data/nuscenes/'
+    tmp: '/data/batch3dmot/tmp/'
+resnet:
+    batch_size: 32
+    lr: 0.002
+    scheduler_step_size: 20
+    scheduler_gamma: 0.5
+    num_epochs: 40
+    res_size: 32
+    shuffle_data: True
+    checkpoint: ''
+    workers: 8
+    save_images: True
+    save_images_val_test: True
+    manual_seed: 5621
+    device: gpu
+    ego_rad_min: 1.0
+    ego_rad_max: 50.0
+pointnet:
+    batch_size: 64
+    workers: 16
+    num_epochs: 500
+    checkpoint: ''
+    feature_transform: False
+    shuffle_data: True
+    manual_seed: 1200
+    num_points: 128
+    lr: 0.001
+    beta_lo: 0.9
+    beta_hi: 0.999
+    scheduler_step_size: 20
+    scheduler_gamma: 0.5
+    min_lidar_pts: 6
+    ego_rad_min: 1.0
+    ego_rad_max: 50.0
+radarnet:
+    manual_seed: 5621
+    checkpoint: ''
+    workers: 8
+    num_epochs: 1000
+    feature_transform: False
+    shuffle_data: True
+    batch_size: 256
+    lr: 0.0002
+    device: gpu
+    min_radar_pts: 2
+    ego_rad_min: 1.0
+    ego_rad_max: 50.0
+    num_points: 64
+preprocessing:
+    res_size: 32
+    nsweeps_lidar: 10
+    nsweeps_radar: 6
+graph_construction:
+    chunk_size: 3
+    batch_size_graph: 5
+    top_knn_nodes: 40
+    feat_3d_pose_dim: 19
+    node_feat_dim: 19
+    split: 'train'
+    top_knn_classes:
+        car: 40
+        truck: 40
+        bus: 40
+        trailer: 40
+        pedestrian: 40
+        motorcycle: 40
+        bicycle: 40
+detections:
+    megvii:
+        mini: 'megvii/results_mini.json'
+        train: 'megvii/results_train.json'
+        val: 'megvii/results_val.json'
+        test: 'megvii/results_test.json'
+    centerpoint:
+        train: 'centerpoint/voxelnet_1440_dcn_flip/infos_train_10sweeps_withvelo_filter_True.json' # w flip augm
+        val: 'centerpoint/voxelnet_1440_dcn_flip/infos_val_10sweeps_withvelo_filter_True.json' # w flip augm
+        test: 'centerpoint/voxelnet_1440_dcn_flip/infos_test_10sweeps_withvelo_painted.json' # w flip augm
+        mini: 'centerpoint/voxelnet_1440_dcn_flip_old/infos_mini_10sweeps_withvelo_filter_True.json'
+gnn:
+    manual_seed: 5621 
+    checkpoint: ''
+    batch_size_graph: 5
+    batch_size: 2
+    lr: 1e-4 # 1e-4 is standard
+    weight_decay: 1e-4 #0.0001
+    beta_lo: 0.9
+    beta_hi: 0.999
+    num_epochs: 100
+    gnn_depth: 6
+    edge_dim: 16
+    node_dim: 19
+    mp_type: 'standard' # or standard
+    loss: 'cb' # or bce
+    top_knn_classes:
+        car: 40
+        truck: 40
+        bus: 40
+        trailer: 40
+        pedestrian: 40
+        motorcycle: 40
+        bicycle: 40
+predict:
+    checkpoint: "gnn/selected_gnn_checkpoint.pth"
+    batch_size_graph: 5
+classes:
+    nuscenes_tracking_eval:
+        car: 1
+        truck: 2
+        bus: 3
+        trailer: 4
+        pedestrian: 5
+        motorcycle: 6
+        bicycle: 7
+eval:
+    verbose: 1
+    eval_config: 'tracking_nips_2019'
+    eval_set: 'val'
+    render_curves: 1
+render:
+    all_scenes: True
+    scene_token: e233467e827140efa4b42d2b4c435855
