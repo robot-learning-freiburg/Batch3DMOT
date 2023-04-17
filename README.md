@@ -1,10 +1,6 @@
 
-# Batch3DMOT
-[**arXiv**](https://arxiv.org/abs/2203.10926) | [**website**](http://batch3dmot.cs.uni-freiburg.de/)
-
-<p align="center">
-  <img src="video_banner.gif" alt="Overview of Batch3DMOT architecture" width="850" />
-</p>
+# Batch3DMOT - Offline 3D Multi-Object Tracking
+[**arXiv**](https://arxiv.org/abs/2203.10926) | [**IEEE Xplore**](https://ieeexplore.ieee.org/document/9832490) | [**website**](http://batch3dmot.cs.uni-freiburg.de/) 
 
 This repository is the official implementation of the paper:
 
@@ -13,6 +9,12 @@ This repository is the official implementation of the paper:
 > [Martin Büchner](https://rl.uni-freiburg.de/people/buechner)  and [Abhinav Valada](https://rl.uni-freiburg.de/people/valada).
 >
 > *IEEE Robotics and Automation Letters (RA-L), Vol. 7, Issue 4, pp. 9707-9714, 2022*
+
+
+<p align="center">
+  <img src="video_banner.gif" alt="Overview of Batch3DMOT architecture" width="850" />
+</p>
+
 
 <p align="center">
   <img src="batch3dmot_architecture.png" alt="Overview of Batch3DMOT architecture" width="850" />
